@@ -20,7 +20,7 @@ function ItemListContainer({saludo, setAddCarrito, addCarrito}) {
         </div>
         <div className="contenedorCards">
           <div className="cardProducto">
-            <img src={mouseImg} alt="" />
+            <img src={mouseImg} alt="Mouse" />
             <h4>Logitech</h4>
             <h3>Mouse Ergonómico</h3>
             <p className="precio">$80.000</p>
