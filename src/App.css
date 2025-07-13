@@ -1,10 +1,30 @@
-body {
-  place-items: normal;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
 #root {
-  width: 100%;
-  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main {
+  flex-grow: 1;
+  padding-top: 20px;
 }
 
 .logo {
@@ -15,7 +35,21 @@ body {
 }
 
 .bg-navGreen {
-  background-color: #2aff6a;
+  background-color: #51869d;
+}
+
+.bg-navGreen a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.bg-navGreen a:hover {
+  color: #3a3a3a;
+}
+
+.bg-navGreen a:focus {
+  text-decoration: underline;
+  font-weight: 700;
 }
 
 .lista {
@@ -76,19 +110,28 @@ li a:hover {
   padding: 20px 0;
 }
 .precio {
-  background-color: #fff700;
+  background-color: transparent;
+  color: #51869d;
+  font-weight: 700;
   padding: 5px 10px;
   width: fit-content;
 }
 .contenedorBotones {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-start;
+  align-items: center;
   gap: 15px;
 }
 
 .contenedorBotones button {
-  background-color: #2aff6a;
+  background-color: #51869d;
+  color: #fff;
+  border: none;
+  padding: 5px;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
 }
 
 .cart {
@@ -124,4 +167,44 @@ footer {
   padding: 20px 0;
   margin-top: 30px;
   text-align: center;
+}
+
+.btn-detalle {
+  background-color: #51869d;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  padding: 5px 15px;
+}
+.btn-detalle:hover {
+  background-color: #416d80;
+}
+
+.contenedor-ItemDetail {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 50px;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 20px;
+}
+
+.contenedor-detail {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 500px;
+}
+
+.contenedor-detail h4 {
+  font-size: 0.9rem;
+}
+
+.contenedor-detail h2 {
+  font-size: 1.5rem;
+}
+
+.contenedor-detail .precio {
+  font-size: 1.8rem;
 }

@@ -1,24 +1,19 @@
-import { useState } from 'react'
-import './App.css'
-import NavBar from './NavBar.jsx'
-import ItemListContainer from './ItemListContainer.jsx'
-import Footer from './Footer.jsx'
-
+import { useState } from "react";
+import "./App.css";
+import NavBar from "./components/NavBar.jsx";
+import Footer from "./components/Footer.jsx";
+import Main from "./components/Main.jsx";
 
 function App() {
-const [addCarrito, setAddCarrito] = useState(0);
-const saludoInicial = '¡Bienvenido a nuestra tienda!';
+  const [addCarrito, setAddCarrito] = useState(0);
 
-
- return (
-  <>
-  <NavBar cantidad={addCarrito} />
-  <ItemListContainer saludo={saludoInicial} setAddCarrito={setAddCarrito} addCarrito={addCarrito} />
-  <Footer />
-  </>
-
- )
-
+  return (
+    <>
+      <NavBar cantidad={addCarrito} />
+      <Main addCarrito={addCarrito} setAddCarrito={setAddCarrito} />
+      <Footer />
+    </>
+  );
 }
 
-export default App
+export default App;
